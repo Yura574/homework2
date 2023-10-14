@@ -1,0 +1,15 @@
+.App {
+    --header_height: 60px;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.hw {
+    margin-top: 10px;
+}
+
+.hwTitle {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: 5rem;
+}
