@@ -61,7 +61,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
         pureOnEnter(e, addUser)
     }
-    console.log(users[users.length-1].name)
+
     const totalUsers = users.length // need to fix
     const lastUserName = users[users.length-1] && users[users.length-1].name // need to fix
 
