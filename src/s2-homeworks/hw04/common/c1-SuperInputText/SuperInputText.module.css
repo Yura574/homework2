@@ -1,20 +1,40 @@
+:root {
+    --offset: calc(-100% - 5px)
+}
+
 .input:focus {
+
 }
 
 .input {
+    width: 372px;
+    height: 36px;
+    border-radius: 3px;
+    outline: 0;
 }
 
 .inputWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .superInput {
+    border: 1px solid #d1d1d1;
 }
 
 .errorInput {
+    border: 1px solid red;
 }
 
 .errorInput:focus {
+    outline: 0;
 }
 
 .error {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    transform: translateY(var(--offset));
+
 }

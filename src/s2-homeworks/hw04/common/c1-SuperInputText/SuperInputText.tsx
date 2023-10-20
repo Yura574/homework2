@@ -53,7 +53,7 @@ const SuperInputText: React.FC<SuperInputTextPropsType> = (
     const finalInputClassName = s.input
         + (error ? ' ' + s.errorInput : ' ' + s.superInput)
         + (className ? ' ' + className : '') // задача на смешивание классов
-
+    console.log(finalInputClassName)
     return (
         <div className={s.inputWrapper}>
             <input

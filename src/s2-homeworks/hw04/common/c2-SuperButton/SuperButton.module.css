@@ -1,19 +1,36 @@
 .button {
+    width: 132px;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .disabled {
+    background-color: #004D99;
+    opacity: 0.5;
+    color: #002E5C;
 }
 
 .secondary {
+    border: 1px solid #0066CC;
+    width: 176px;
+    color: #0066CC;
 }
 
 .default {
+    background-color: #0066CC;
+    color: white;
 }
 
 .red {
+    background-color: #CC1439;
+    color: white;
 }
 
 .default:hover {
+    cursor: pointer;
 }
 
 .red:hover {
@@ -22,7 +39,9 @@
 .secondary:hover {
 }
 
-
+.button:active{
+    transform: scale(0.9);
+}
 .default:active {
 }
 
@@ -33,4 +52,5 @@
 }
 
 .button:disabled {
+    transform: scale(1);
 }
