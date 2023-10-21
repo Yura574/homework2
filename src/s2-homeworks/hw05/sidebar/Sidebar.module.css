@@ -1,24 +1,56 @@
 .sidebar {
+    transform: translateX(-100%);
+    /*transition: 1s;*/
+    height: 100vh;
+    position: absolute;
+    visibility: hidden;
+
+
 }
 
 .sidebar.open {
+    width: 200px;
+    background-color: white;
+    transform: translateX(0);
+    transition: 1s;
+    z-index: 1;
+    visibility: visible;
+}
+.buttonWrapper{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .background {
+    background-color: #212A34;
 }
 
 .nav {
+    display: flex;
+    flex-direction: column;
+
 }
 
 .nav a {
+    padding: 15px;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
 }
 
 .nav a:hover {
+    color: #58ACFF;
 }
 
 .nav a.active {
+    color: #004D99;
 }
 .close {
+    border: none;
+    background-color: inherit;
+    padding: 20px;
+    cursor: pointer ;
 }
 
 .close img {

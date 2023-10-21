@@ -13,7 +13,9 @@ export const Layout: FC<PropsType> = ({ children }) => {
 
     useEffect(() => {
         open && (document.body.style.overflow = 'hidden')
+        open &&( document.body.style.paddingRight='25px')
         !open && (document.body.style.overflow = 'unset')
+        !open &&( document.body.style.paddingRight='0')
     }, [open]) // отключает прокрутку при открытом меню
 
     return (

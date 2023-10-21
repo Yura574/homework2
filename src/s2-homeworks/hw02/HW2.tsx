@@ -53,11 +53,9 @@ function HW2() {
 
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => { // need to fix any
-        console.log('delete')
         setAffairs(deleteAffair(affairs, _id))
 
     }
-    console.log(defaultAffairs)
     return (
         <div id={'hw2'}>
             <div className={s2.hwTitle}>Homework #2</div>
