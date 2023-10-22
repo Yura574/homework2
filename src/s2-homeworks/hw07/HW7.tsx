@@ -19,7 +19,10 @@ const arr = [
 
 const HW7 = () => {
     const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
-
+    console.log(value)
+    debugger
+    const selectValue = arr.find(el=> el.id === value)
+    console.log(selectValue)
     return (
         <div id={'hw7'}>
             <div className={s2.hwTitle}>Homework #7</div>
@@ -31,7 +34,7 @@ const HW7 = () => {
                         <SuperSelect
                             id={'hw7-super-select'}
                             options={arr}
-                            value={value}
+                            value={selectValue?.value}
                             onChangeOption={onChangeOption}
                         />
                     </div>
