@@ -26,6 +26,33 @@ function Clock() {
     const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
 
     }
+    const currentData = new Date().getDate()
+    const daysOfTheWeek = {
+        '0': 'Sunday',
+        '1': 'Monday',
+        '2': 'Tuesday',
+        '3': 'Wednesday',
+        '4': 'Thursday',
+        '5': 'Friday',
+        '6': 'Saturday',
+    }
+    //@ts-ignore
+    // const currentDay = days[currentData.getDay()]
+    console.log(currentData)
+
+
+// Массив с названиями дней недели
+
+// // Получаем день недели
+//     const dayOfWeek = daysOfWeek[currentDate.getDay()];
+//
+// // Получаем текущее время в формате HH:mm:ss
+//     const time = currentDate.toLocaleTimeString('en-US', { hour12: false });
+//
+// // Формируем строку с результатом
+//     const result = `${dayOfWeek}, ${time}`;
+
+// Выводим результат в консоль
 
     const stringTime = 'date->time' || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
     const stringDate = 'date->date' || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
