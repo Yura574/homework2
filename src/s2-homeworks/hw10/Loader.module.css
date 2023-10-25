@@ -1,3 +1,16 @@
 .loader {
     /*свг и/или анимация*/
+    width: 100px;
+    height: 100px;
+    background: url("./Loading.svg") no-repeat center;
+    animation: load 1s infinite ease-in-out;
+
+}
+@keyframes load {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
