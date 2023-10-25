@@ -5,13 +5,15 @@ const SuperRange: React.FC<SliderProps> = (props) => {
     return (
         <Slider
             sx={{ // стили для слайдера // пишет студент
-                width:'400px',
+                width:'147px',
+                // height:'4px',
                 color: '#0C2',
                 // color: 'success.main',
                 '& .MuiSlider-thumb': {
                     borderRadius: '50%',
                     border: '3px solid #0C2',
-                    background: 'white'
+                    background: 'white',
+                    pointerEvents: 'auto'
 
                 },
             }}

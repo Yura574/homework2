@@ -26,11 +26,6 @@ function HW11() {
          }
 
     }
-    const change2 = (event: any, value: number | number[]) => {
-        // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
-        setValue2(event.target.value)
-        console.log(value)
-    }
 
 
     return (
