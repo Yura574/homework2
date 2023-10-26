@@ -17,7 +17,6 @@ function HW11() {
 
     const change = (event: any, value: number | number[]) => {
         // пишет студент // если пришёл массив - сохранить значения в оба useState, иначе в первый
-        console.log(event.target)
          if (Array.isArray(value)) {
              setValue1(value[0])
              setValue2(value[1])
@@ -51,7 +50,7 @@ function HW11() {
                             id={'hw11-double-slider'}
                             onChange={change}
                             value={[value1, value2]}
-                            disableSwap
+                            // disableSwap
 
                             // сделать так чтоб value1/2 изменялось // пишет студент
 
