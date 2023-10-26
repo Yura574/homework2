@@ -35,10 +35,16 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
+                if (res) {
+                    setTechs(res.data.techs)
+                }
 
                 // сохранить пришедшие данные
 
                 //
+            })
+            .catch(e => {
+                console.log(e)
             })
     }
 
@@ -51,9 +57,11 @@ const HW14 = () => {
 
         //
     }
+    console.log(searchParams)
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
+        console.log(params.find)
         sendQuery(params.find || '')
         setFind(params.find || '')
     }, [])
