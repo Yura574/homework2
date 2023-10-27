@@ -57,7 +57,6 @@ const HW14 = () => {
 
         //
     }
-    console.log(searchParams)
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)

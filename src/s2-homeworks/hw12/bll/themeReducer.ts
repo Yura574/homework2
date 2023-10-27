@@ -6,12 +6,10 @@ type InitialStateType = {
 }
 
 export const themeReducer = (state = initState, action: ChaneThemeIdType): InitialStateType => { // fix any
-    console.log(action)
     switch (action.type) {
         // дописать
 
         case 'SET_THEME_ID':
-            console.log('sdssd')
             return {...state, themeId: action.id}
 
         default:

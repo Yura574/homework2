@@ -47,11 +47,15 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    const sendQuery = (params: any) => {
+    const sendQuery = (params: ParamsType) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 // делает студент
+                if (res) {
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                }
 
                 // сохранить пришедшие данные
 
@@ -61,17 +65,21 @@ const HW15 = () => {
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
+        setPage(newPage)
         // setPage(
         // setCount(
+        setCount(newCount)
 
         // sendQuery(
         // setSearchParams(
+        sendQuery({page: newPage, count: newCount, sort: sort})
+        setSearchParams({page: newPage.toString(), count: newCount.toString()})
 
         //
     }
 
     const onChangeSort = (newSort: string) => {
+        console.log(newSort)
         // делает студент
 
         // setSort(
@@ -82,10 +90,9 @@ const HW15 = () => {
 
         //
     }
-
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: +params.page, count: +params.count, sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
@@ -119,12 +126,16 @@ const HW15 = () => {
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
                         tech
-                        <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
+                        <SuperSort sort={sort}
+                                   value={'tech'}
+                                   onChange={onChangeSort}/>
                     </div>
 
                     <div className={s.developerHeader}>
                         developer
-                        <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
+                        <SuperSort sort={sort}
+                                   value={'developer'}
+                                   onChange={onChangeSort}/>
                     </div>
                 </div>
 
