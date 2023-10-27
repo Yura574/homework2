@@ -79,12 +79,11 @@ const HW15 = () => {
     }
 
     const onChangeSort = (newSort: string) => {
-        console.log(newSort)
         // делает студент
-
+        setSort(newSort)
         // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        sendQuery({sort: newSort, page, count})
         // sendQuery(
         // setSearchParams(
 
@@ -108,6 +107,7 @@ const HW15 = () => {
             </div>
         </div>
     ))
+    console.log('teh', techs)
 
     return (
         <div id={'hw15'}>
